@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-yv2j@^c=wzxz31cghe31lwy*p6f5zqfw0p7!=d#fjwvuf-nn4_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'book-world2.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'book-world2.herokuapp.com','redis://127.0.0.1:6379']
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 AUTH_USER_MODEL = 'accounts.User'
