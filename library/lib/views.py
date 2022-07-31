@@ -88,7 +88,7 @@ def books(request):
     return render(request, 'books.html', context)
 
 def home(request):
-    send_notification.delay()
+    send_notification
     return render(request, 'temp.html')
 
 @user_passes_test(lambda u: u.is_staff)
