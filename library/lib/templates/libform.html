@@ -1,0 +1,12 @@
+
+<html>
+{%include "temp.html"%}<br>
+{% if user.is_superuser %}
+<form action="{% url 'librarain_register' %}" method="post">
+    {%csrf_token%}
+    {{form}}
+    <button type="submit",>Register</button>
+</form>
+{% endif %}
+</center>
+</html>
