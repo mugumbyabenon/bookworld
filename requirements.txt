@@ -9,6 +9,8 @@ click-plugins==1.1.1
 click-repl==0.2.0
 colorama==0.4.5
 Deprecated==1.2.13
+dj==0.1
+dj-database-url==1.0.0
 Django==4.0.6
 django-celery-beat==2.3.0
 django-celery-results==2.4.0
@@ -52,4 +54,5 @@ urllib3==1.26.10
 vine==5.0.0
 wcwidth==0.2.5
 websockets==8.1
+whitenoise==6.2.0
 wrapt==1.14.1
