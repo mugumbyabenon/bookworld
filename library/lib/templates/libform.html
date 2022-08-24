@@ -1,11 +1,17 @@
 
 <html>
-{%include "temp.html"%}<br>
+{%include "librarain.html"%}<br>
 {% if user.is_superuser %}
-<form action="{% url 'librarain_register' %}" method="post">
+<h1> Register or delete librarain</h1>
+<form  method="post">
     {%csrf_token%}
-    {{form}}
-    <button type="submit",>Register</button>
+     <div class="form-group">
+    <br>
+    <label for="exampleInputPassword1">Enter username</label>
+    <input type="text" class="form-control" name="register" placeholder="register or delete librarain">
+    <br>
+  </div>
+    <button type="submit">Register</button>
 </form>
 {% endif %}
 </center>
