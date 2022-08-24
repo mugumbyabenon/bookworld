@@ -96,6 +96,9 @@ h3 {
   </div>
   </li>
   <li><a href="/borrowed">Borrowed books</a></li>
+    {% if user.is_superuser %}
+        <li><a href="/accounts/librarain_register">Register Librarain</a></li>
+        {% endif %}
   <li style="float:right"><a class="active" href="/return">Return</a></li>
 </ol>
  {% if messages %}
@@ -126,6 +129,8 @@ document.querySelector(".enrollment").addEventListener("click", toggleDropdown)
 </script>
 </body>
 </html>
+
+
 
 
 
