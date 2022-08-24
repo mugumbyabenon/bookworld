@@ -29,6 +29,32 @@ def librarain(request):
 def student(request):
     return render(request, '../templates/student.html' )
 
+@user_passes_test(lambda u: u.is_superuser)
+def librarain_register(request):
+    if request.method == 'POST':
+        username = request.POST['register']
+        try:
+            n = User.objects.get(username=username)
+        except ObjectDoesNotExist:
+            messages.success(request,'The specified user name doesnot exist')
+            return redirect('/accounts/librarain_register/')
+        if n.is_student == True:
+            n.is_student = False
+            n.is_staff = True
+            n.is_email_verified = False
+            n.save()
+            messages.success(request,'The user is now a librarain')
+            return redirect('/accounts/login/')
+        else:
+            n.is_student = True
+            n.is_staff = False
+            n.is_email_verified = False
+            n.save()
+            messages.success(request, 'The user is no longer now a librarain and now a student')
+            return redirect('/accounts/login/')
+
+    return render(request,'libform.html')
+
 class student_register(CreateView):
     model = User
     form_class = StudentSignUpForm
