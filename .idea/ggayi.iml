@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/venv" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/.idea" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (pythonProject2) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
